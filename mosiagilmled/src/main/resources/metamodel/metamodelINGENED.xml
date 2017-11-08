@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="618" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>simulations</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="simulations"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="SimulationSpec" type="ingenias.editor.entities.MetaDiagram">
+<objectproperty id="BasicRepresentations">
+</objectproperty>
+<objectproperty id="PreferredOrder" collection="true">
+</objectproperty>
+<objectproperty id="Properties" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Population" type="ingenias.editor.entities.MetaObject">
+<objectproperty id="Keyfield">
+</objectproperty>
+<objectproperty id="BasicRepresentations">
+</objectproperty>
+<objectproperty id="VisualRepresentations" collection="true">
+</objectproperty>
+<objectproperty id="Properties" collection="true">
+</objectproperty>
+<objectproperty id="PreferredOrder" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="Instantiable">yes</key>
+<key id="Recommendation"></key>
+<key id="ExampleId"></key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+<key id="Package"></key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+<relationship id="0" type="ingenias.editor.entities.Contains">
+<object id="0" type="ingenias.editor.entities.Contains">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="SimulationSpec" class="ingenias.editor.entities.MetaDiagram" roleName="Containssource" type="ingenias.editor.entities.ContainssourceRole" dgcid="681052728">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="Containstarget" type="ingenias.editor.entities.ContainstargetRole" dgcid="1821677591">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+</relationships>
+<models> 
+ <model id="simulations" type="ingenias.editor.models.MetamodelModelJGraph">
+<object id="simulations" type="ingenias.editor.entities.MetamodelDataEntity">
+<mapproperties>
+<key id="Id">simulations</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="Population" nid="node0" type="MetaObject">
+		<attr name="bounds">
+			<rectangle x="480" y="86" width="81" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="0" nid="node2" type="Contains">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="616" y="78" width="57" height="17"></rectangle>		</attr>
+
+
+	<connected id="node1"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node0">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="SimulationSpec" nid="node1" type="MetaDiagram">
+		<attr name="bounds">
+			<rectangle x="727" y="45" width="93" height="42"></rectangle>		</attr>
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="480" y="86" width="81" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="616" y="78" width="57" height="17"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="727" y="45" width="93" height="42"></rectangle>		</attr>
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>

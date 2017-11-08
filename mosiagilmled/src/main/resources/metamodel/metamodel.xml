@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-models examplefile="example/demo.xml">
+  <object id="Population" instanciable="yes" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mPopulation.png</small-icon>
+      <normal-icon>images/Population.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Population" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <metamodel icon="images/mSimulationSpec.png" id="SimulationSpec" name="">
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <code id="constructor"><![CDATA[ToolTipManager.sharedInstance().registerComponent(this);
+this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
+this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
+]]></code>
+    <objects>
+      <object id="Population"/>
+    </objects>
+    <relationships/>
+  </metamodel>
+</meta-models>

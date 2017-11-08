@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="175" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>test</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="test"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="Population0" type="ingenias.editor.entities.Population">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Population1" type="ingenias.editor.entities.Population">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Population2" type="ingenias.editor.entities.Population">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+</relationships>
+<models> 
+ <model id="test" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="test" type="ingenias.editor.entities.SimulationSpecDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="Population0" nid="node2" type="Population">
+		<attr name="bounds">
+			<rectangle x="336" y="47" width="77" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="Population2" nid="node0" type="Population">
+		<attr name="bounds">
+			<rectangle x="0" y="0" width="77" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="Population1" nid="node1" type="Population">
+		<attr name="bounds">
+			<rectangle x="85" y="111" width="77" height="36"></rectangle>		</attr>
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node2">
+		<attr name="bounds">
+			<rectangle x="336" y="47" width="77" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="0" y="0" width="77" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="85" y="111" width="77" height="36"></rectangle>		</attr>
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>
