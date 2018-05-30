@@ -10,20 +10,18 @@
    </path>
 </leafpackages>
 <objects>
-<object id="Population0" type="ingenias.editor.entities.Population">
+<object id="MASSISPopulation0" type="ingenias.editor.entities.MASSISPopulation">
 <mapproperties>
+<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,Class1</key>
+<key id="AmountProperty">20</key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
 </object>
-<object id="Population1" type="ingenias.editor.entities.Population">
+<object id="MASSISPopulation1" type="ingenias.editor.entities.MASSISPopulation">
 <mapproperties>
-<key id="Description"></key>
-<key id="_view_type">INGENIAS</key>
-</mapproperties>
-</object>
-<object id="Population2" type="ingenias.editor.entities.Population">
-<mapproperties>
+<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,ClassesLobby.Class2,ClassesLobby.Class3,Class3</key>
+<key id="AmountProperty">10</key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
@@ -46,23 +44,16 @@
 
 	<graph>
 			
-	<node id="Population0" nid="node2" type="Population">
+	<node id="MASSISPopulation1" nid="node1" type="MASSISPopulation">
 		<attr name="bounds">
-			<rectangle x="336" y="47" width="77" height="38"></rectangle>		</attr>
+			<rectangle x="236" y="65" width="122" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="Population2" nid="node0" type="Population">
+	<node id="MASSISPopulation0" nid="node0" type="MASSISPopulation">
 		<attr name="bounds">
-			<rectangle x="0" y="0" width="77" height="36"></rectangle>		</attr>
-
-
-	</node>
-			
-	<node id="Population1" nid="node1" type="Population">
-		<attr name="bounds">
-			<rectangle x="85" y="111" width="77" height="36"></rectangle>		</attr>
+			<rectangle x="43" y="74" width="122" height="36"></rectangle>		</attr>
 
 
 	</node><parentship>
@@ -76,23 +67,16 @@
 
 	<layout>
 			
-	<node id="node2">
+	<node id="node1">
 		<attr name="bounds">
-			<rectangle x="336" y="47" width="77" height="38"></rectangle>		</attr>
+			<rectangle x="236" y="65" width="122" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
 	<node id="node0">
 		<attr name="bounds">
-			<rectangle x="0" y="0" width="77" height="36"></rectangle>		</attr>
-
-
-	</node>
-			
-	<node id="node1">
-		<attr name="bounds">
-			<rectangle x="85" y="111" width="77" height="36"></rectangle>		</attr>
+			<rectangle x="43" y="74" width="122" height="36"></rectangle>		</attr>
 
 
 	</node>

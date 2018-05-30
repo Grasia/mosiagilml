@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta-models examplefile="example/demo.xml">
-  <object id="Population" instanciable="yes" keyfield="id" package="">
+  <object id="MASSISPopulation" inherits="Population" instanciable="yes"
+    keyfield="PATHProperty" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="PATHProperty"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+        <order>PATHProperty</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mMASSISPopulation.png</small-icon>
+      <normal-icon>images/MASSISPopulation.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="PATHProperty"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="MASSISPopulation" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="UbikSimPopulation" inherits="Population"
+    instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
     <description/>
     <recommendation/>
     <properties>
@@ -11,6 +61,53 @@
       </property>
       <preferredorder>
         <order>id</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mUbikSimPopulation.png</small-icon>
+      <normal-icon>images/UbikSimPopulation.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="UbikSimPopulation" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="Population" instanciable="yes" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="AmountProperty"
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>AmountProperty</order>
         <order>Description</order>
       </preferredorder>
     </properties>
@@ -20,6 +117,8 @@
       <layout>
         <properties>
           <property id="id"/>
+          <property id="AmountProperty"/>
+          <property id="AmountProperty"/>
         </properties>
         <views>
           <content id="INGENIAS">
@@ -56,7 +155,9 @@ this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
 this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
 ]]></code>
     <objects>
+      <object id="MASSISPopulation"/>
       <object id="Population"/>
+      <object id="UbikSimPopulation"/>
     </objects>
     <relationships/>
   </metamodel>

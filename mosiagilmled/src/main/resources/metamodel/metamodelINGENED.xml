@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project cid="618" version="1.2">
+<project cid="3" version="1.2">
 <projectproperties>
 <projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
  <openeddiagram>simulations</openeddiagram></projectproperties>
@@ -42,6 +42,110 @@
 <key id="Package"></key>
 </mapproperties>
 </object>
+<object id="MASSISPopulation" type="ingenias.editor.entities.MetaObject">
+<objectproperty id="Keyfield">
+<object id="PATHProperty" type="ingenias.editor.entities.PropertyField">
+<objectproperty id="WrappedType">
+<object id="PATHToFollow" type="ingenias.editor.entities.ExternalTypeWrapper">
+<objectproperty id="DefaultValues" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="ExternalType">java.lang.String</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Preferredwidget">ingenias.editor.widget.CustomJTextField</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="BasicRepresentations">
+</objectproperty>
+<objectproperty id="VisualRepresentations" collection="true">
+</objectproperty>
+<objectproperty id="Properties" collection="true">
+</objectproperty>
+<objectproperty id="PreferredOrder" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="Instantiable">yes</key>
+<key id="Recommendation"></key>
+<key id="ExampleId"></key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+<key id="Package"></key>
+</mapproperties>
+</object>
+<object id="UbikSimPopulation" type="ingenias.editor.entities.MetaObject">
+<objectproperty id="Keyfield">
+</objectproperty>
+<objectproperty id="BasicRepresentations">
+</objectproperty>
+<objectproperty id="VisualRepresentations" collection="true">
+</objectproperty>
+<objectproperty id="Properties" collection="true">
+</objectproperty>
+<objectproperty id="PreferredOrder" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="Instantiable">yes</key>
+<key id="Recommendation"></key>
+<key id="ExampleId"></key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+<key id="Package"></key>
+</mapproperties>
+</object>
+<object id="PATHProperty" type="ingenias.editor.entities.PropertyField">
+<objectproperty id="WrappedType">
+<object id="PATHToFollow" type="ingenias.editor.entities.ExternalTypeWrapper">
+<objectproperty id="DefaultValues" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="ExternalType">java.lang.String</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Preferredwidget">ingenias.editor.widget.CustomJTextField</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="AmountProperty" type="ingenias.editor.entities.PropertyField">
+<objectproperty id="WrappedType">
+<object id="Amount" type="ingenias.editor.entities.ExternalTypeWrapper">
+<objectproperty id="DefaultValues" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="ExternalType">java.lang.Integer</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Preferredwidget">ingenias.editor.widget.IntegerJTextField</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="PATHToFollow" type="ingenias.editor.entities.ExternalTypeWrapper">
+<objectproperty id="DefaultValues" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="ExternalType">java.lang.String</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Amount" type="ingenias.editor.entities.ExternalTypeWrapper">
+<objectproperty id="DefaultValues" collection="true">
+</objectproperty>
+<mapproperties>
+<key id="ExternalType">java.lang.Integer</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
 </objects>
 <relationships>
 <relationship id="0" type="ingenias.editor.entities.Contains">
@@ -50,12 +154,114 @@
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
 </object>
-<role idEntity="SimulationSpec" class="ingenias.editor.entities.MetaDiagram" roleName="Containssource" type="ingenias.editor.entities.ContainssourceRole" dgcid="681052728">
+<role idEntity="SimulationSpec" class="ingenias.editor.entities.MetaDiagram" roleName="Containssource" type="ingenias.editor.entities.ContainssourceRole" dgcid="1273398392">
 <mapproperties>
 <key id="attributeToShow">0</key>
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
-</role><role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="Containstarget" type="ingenias.editor.entities.ContainstargetRole" dgcid="1821677591">
+</role><role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="Containstarget" type="ingenias.editor.entities.ContainstargetRole" dgcid="911011061">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="2" type="ingenias.editor.entities.Has">
+<object id="2" type="ingenias.editor.entities.Has">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="MASSISPopulation" class="ingenias.editor.entities.MetaObject" roleName="Hassource" type="ingenias.editor.entities.HassourceRole" dgcid="1398370688">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="PATHProperty" class="ingenias.editor.entities.PropertyField" roleName="Hastarget" type="ingenias.editor.entities.HastargetRole" dgcid="935647718">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="3" type="ingenias.editor.entities.Has">
+<object id="3" type="ingenias.editor.entities.Has">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="Hassource" type="ingenias.editor.entities.HassourceRole" dgcid="911011061">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="AmountProperty" class="ingenias.editor.entities.PropertyField" roleName="Hastarget" type="ingenias.editor.entities.HastargetRole" dgcid="169423358">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="5" type="ingenias.editor.entities.Contains">
+<object id="5" type="ingenias.editor.entities.Contains">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="SimulationSpec" class="ingenias.editor.entities.MetaDiagram" roleName="Containssource" type="ingenias.editor.entities.ContainssourceRole" dgcid="1273398392">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="UbikSimPopulation" class="ingenias.editor.entities.MetaObject" roleName="Containstarget" type="ingenias.editor.entities.ContainstargetRole" dgcid="2109510615">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="4" type="ingenias.editor.entities.InheritsO">
+<object id="4" type="ingenias.editor.entities.InheritsO">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="InheritsOtarget" type="ingenias.editor.entities.InheritsOtargetRole" dgcid="911011061">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="UbikSimPopulation" class="ingenias.editor.entities.MetaObject" roleName="InheritsOsource" type="ingenias.editor.entities.InheritsOsourceRole" dgcid="2109510615">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="6" type="ingenias.editor.entities.Contains">
+<object id="6" type="ingenias.editor.entities.Contains">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="SimulationSpec" class="ingenias.editor.entities.MetaDiagram" roleName="Containssource" type="ingenias.editor.entities.ContainssourceRole" dgcid="1273398392">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="MASSISPopulation" class="ingenias.editor.entities.MetaObject" roleName="Containstarget" type="ingenias.editor.entities.ContainstargetRole" dgcid="1398370688">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="1" type="ingenias.editor.entities.InheritsO">
+<object id="1" type="ingenias.editor.entities.InheritsO">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Population" class="ingenias.editor.entities.MetaObject" roleName="InheritsOtarget" type="ingenias.editor.entities.InheritsOtargetRole" dgcid="911011061">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="MASSISPopulation" class="ingenias.editor.entities.MetaObject" roleName="InheritsOsource" type="ingenias.editor.entities.InheritsOsourceRole" dgcid="1398370688">
 <mapproperties>
 <key id="attributeToShow">0</key>
 <key id="_view_type">INGENIAS</key>
@@ -78,27 +284,126 @@
 
 	<graph>
 			
-	<node id="Population" nid="node0" type="MetaObject">
+	<node id="AmountProperty" nid="node5" type="PropertyField">
 		<attr name="bounds">
-			<rectangle x="480" y="86" width="81" height="40"></rectangle>		</attr>
+			<rectangle x="208" y="219" width="129" height="40"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="0" nid="node2" type="Contains">
+	<node id="2" nid="node7" type="Has">
+		<attr name="bounds">
+			<rectangle x="70" y="128" width="32" height="15"></rectangle>		</attr>
 		<attr name="view">
 			<string>ingenias</string>
 		</attr>
 
+
+
+	<connected id="node3">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node2">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="6" nid="node11" type="Contains">
 		<attr name="bounds">
-			<rectangle x="616" y="78" width="57" height="17"></rectangle>		</attr>
+			<rectangle x="167" y="44" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
 
 
-	<connected id="node1"><attr name="extraLabels">
-			<array>
 
-</array>
-</attr>
+	<connected id="node4">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node3">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="UbikSimPopulation" nid="node1" type="MetaObject">
+		<attr name="bounds">
+			<rectangle x="481" y="133" width="118" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="1" nid="node12" type="InheritsO">
+		<attr name="bounds">
+			<rectangle x="174" y="103" width="49" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node3">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
 
 
 
@@ -112,15 +417,221 @@
 
 
 
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
 
 	</connected>
 	</node>
 			
-	<node id="SimulationSpec" nid="node1" type="MetaDiagram">
+	<node id="MASSISPopulation" nid="node3" type="MetaObject">
 		<attr name="bounds">
-			<rectangle x="727" y="45" width="93" height="42"></rectangle>		</attr>
+			<rectangle x="27" y="65" width="114" height="40"></rectangle>		</attr>
 
 
+	</node>
+			
+	<node id="Population" nid="node0" type="MetaObject">
+		<attr name="bounds">
+			<rectangle x="256" y="111" width="71" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="PATHProperty" nid="node2" type="PropertyField">
+		<attr name="bounds">
+			<rectangle x="46" y="166" width="87" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="SimulationSpec" nid="node4" type="MetaDiagram">
+		<attr name="bounds">
+			<rectangle x="249" y="1" width="98" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="4" nid="node10" type="InheritsO">
+		<attr name="bounds">
+			<rectangle x="380" y="133" width="49" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node1">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node0">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="0" nid="node6" type="Contains">
+		<attr name="bounds">
+			<rectangle x="266" y="69" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node4">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node0">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="5" nid="node9" type="Contains">
+		<attr name="bounds">
+			<rectangle x="386" y="77" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node4">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node1">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="3" nid="node8" type="Has">
+		<attr name="bounds">
+			<rectangle x="266" y="178" width="32" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node0">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node5">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
 	</node><parentship>
 </parentship>
 <entityconstraints>
@@ -132,27 +643,121 @@
 
 	<layout>
 			
-	<node id="node0">
+	<node id="node5">
 		<attr name="bounds">
-			<rectangle x="480" y="86" width="81" height="40"></rectangle>		</attr>
+			<rectangle x="208" y="219" width="129" height="40"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="node2">
+	<node id="node7">
+		<attr name="bounds">
+			<rectangle x="70" y="128" width="32" height="15"></rectangle>		</attr>
 		<attr name="view">
 			<string>ingenias</string>
 		</attr>
 
+
+
+	</node>
+			
+	<node id="node11">
 		<attr name="bounds">
-			<rectangle x="616" y="78" width="57" height="17"></rectangle>		</attr>
+			<rectangle x="167" y="44" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
 
 
 	</node>
 			
 	<node id="node1">
 		<attr name="bounds">
-			<rectangle x="727" y="45" width="93" height="42"></rectangle>		</attr>
+			<rectangle x="481" y="133" width="118" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node12">
+		<attr name="bounds">
+			<rectangle x="174" y="103" width="49" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node3">
+		<attr name="bounds">
+			<rectangle x="27" y="65" width="114" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="256" y="111" width="71" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="bounds">
+			<rectangle x="46" y="166" width="87" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node4">
+		<attr name="bounds">
+			<rectangle x="249" y="1" width="98" height="40"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node10">
+		<attr name="bounds">
+			<rectangle x="380" y="133" width="49" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node6">
+		<attr name="bounds">
+			<rectangle x="266" y="69" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node9">
+		<attr name="bounds">
+			<rectangle x="386" y="77" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node8">
+		<attr name="bounds">
+			<rectangle x="266" y="178" width="32" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
 
 
 	</node>
