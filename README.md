@@ -27,6 +27,19 @@ A selfcontained editor will be created in the mosiagilmled/target/ directory. Yo
 
 mosiagilml$ java -jar target/mosiagilmled-1.0-SNAPSHOT-selfcontained.jar
 
+GENERATING SIMULATOR SPECIFIC CONFIGURATIONS
+--------------------------------------------
+
+Go to the *basicscenario* folder. Run the editor
+	ant edit
+Create a specification using MASSISPopulation or UbikSimPopulation entities. If creating MASSISPopulation, determine the PATH the population will follow.
+
+To generate the MASSIS configuration run the following within the *basicscenario* folder
+
+	mvn clean compile exec:java -Dexec.mainClass="mosi.massis.MASSISLUAGenerator" -Dexec.args="src/main/spec/specification.xml"
+
+This will produce a *sample.lua* file that can be feeded into the MASSIS terminal
+
 DOCUMENTING
 -----------
 
