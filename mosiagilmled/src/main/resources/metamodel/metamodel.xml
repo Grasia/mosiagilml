@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta-models examplefile="example/demo.xml">
+  <object id="UbikSimPopulation" inherits="Population"
+    instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="PopulationDistribution"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="PopulationBehavior"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>PopulationDistribution</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+        <order>PopulationBehavior</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mUbikSimPopulation.png</small-icon>
+      <normal-icon>images/UbikSimPopulation.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="PopulationDistribution"/>
+          <property id="PopulationBehavior"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="UbikSimPopulation" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <metamodel icon="images/mSimulationSpec.png" id="SimulationSpec" name="">
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <code id="constructor"><![CDATA[ToolTipManager.sharedInstance().registerComponent(this);
+this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
+this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
+]]></code>
+    <objects>
+      <object id="FireEmergency"/>
+      <object id="MASSISPopulation"/>
+      <object id="Population"/>
+      <object id="UbikSimPopulation"/>
+      <object id="Emergency"/>
+    </objects>
+    <relationships/>
+  </metamodel>
   <object id="MASSISPopulation" inherits="Population" instanciable="yes"
     keyfield="PATHProperty" package="" type="ingenias.editor.entities.MetaObject">
     <description/>
@@ -49,8 +130,8 @@
       </layout>
     </graphics>
   </object>
-  <object id="UbikSimPopulation" inherits="Population"
-    instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+  <object id="FireEmergency" inherits="Emergency" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
     <description/>
     <recommendation/>
     <properties>
@@ -59,26 +140,44 @@
         <defaultvalues/>
         <label lang="en">Description</label>
       </property>
+      <property id="SizeFire"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="SpeedFire"
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
       <preferredorder>
         <order>id</order>
-        <order>AmountProperty</order>
         <order>Description</order>
+        <order>EmergencyCreationDelay</order>
+        <order>SizeFire</order>
+        <order>SpeedFire</order>
+        <order>EventLocationX</order>
+        <order>EventLocationY</order>
       </preferredorder>
     </properties>
     <graphics>
-      <small-icon>images/mUbikSimPopulation.png</small-icon>
-      <normal-icon>images/UbikSimPopulation.png</normal-icon>
+      <small-icon>images/mFireEmergency.png</small-icon>
+      <normal-icon>images/FireEmergency.png</normal-icon>
       <layout>
         <properties>
           <property id="id"/>
-          <property id="AmountProperty"/>
+          <property id="SizeFire"/>
+          <property id="SpeedFire"/>
+          <property id="EmergencyCreationDelay"/>
+          <property id="EventLocationX"/>
+          <property id="EventLocationY"/>
         </properties>
         <views>
           <content id="INGENIAS">
 ##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
 ##vbox Background="white" constraints="BorderLayout.CENTER"#
 ##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
-##stereotype text="UbikSimPopulation" HorizontalAlignment="CENTER"/#
+##stereotype text="FireEmergency" HorizontalAlignment="CENTER"/#
 ##/panel#
 ##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
 ##label id="Id"/#
@@ -138,27 +237,67 @@
       </layout>
     </graphics>
   </object>
-  <metamodel icon="images/mSimulationSpec.png" id="SimulationSpec" name="">
+  <object id="Emergency" instanciable="yes" keyfield="EventLocationX" package="">
+    <description/>
+    <recommendation/>
     <properties>
+      <property id="EmergencyCreationDelay"
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
       <property id="Description"
         preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
         <defaultvalues/>
         <label lang="en">Description</label>
       </property>
+      <property id="EventLocationX"
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="EventLocationY"
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
       <preferredorder>
         <order>id</order>
+        <order>EmergencyCreationDelay</order>
         <order>Description</order>
+        <order>EventLocationX</order>
+        <order>EventLocationY</order>
       </preferredorder>
     </properties>
-    <code id="constructor"><![CDATA[ToolTipManager.sharedInstance().registerComponent(this);
-this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
-this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
-]]></code>
-    <objects>
-      <object id="MASSISPopulation"/>
-      <object id="Population"/>
-      <object id="UbikSimPopulation"/>
-    </objects>
-    <relationships/>
-  </metamodel>
+    <graphics>
+      <small-icon>images/mEmergency.png</small-icon>
+      <normal-icon>images/Emergency.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="EmergencyCreationDelay"/>
+          <property id="EventLocationX"/>
+          <property id="EventLocationY"/>
+          <property id="EmergencyCreationDelay"/>
+          <property id="EventLocationX"/>
+          <property id="EventLocationY"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Emergency" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
 </meta-models>
