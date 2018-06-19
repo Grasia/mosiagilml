@@ -16,6 +16,7 @@ In order to launch the meta editor, write the following in the root directory:
 
 mosiagilml$ mvn install
 
+
 GENERATING AND USING MOSIAGILML EDITOR
 --------------------------------------
 
@@ -23,17 +24,21 @@ Once the metamodel is changed and saved, to generate a new editor write:
 
 sociaalml$ mvn package
 
-A selfcontained editor will be created in the mosiagilmled/target/ directory. You can run the editor:
+A selfcontained editor will be created in the mosiagilmled/target/ directory. You can run the editor to check the meta model with
 
 mosiagilml$ java -jar target/mosiagilmled-1.0-SNAPSHOT-selfcontained.jar
 
-GENERATING SIMULATOR SPECIFIC CONFIGURATIONS
---------------------------------------------
+Using the MOSI-AGIL ML Editor
+-----------------------------
 
 Go to the *basicscenario* folder. Run the editor
 	ant edit
-Create a specification using MASSISPopulation or UbikSimPopulation entities. If creating MASSISPopulation, determine the PATH the population will follow.
+Create a specification using MASSISPopulation or UbikSimPopulation entities. If creating MASSISPopulation, determine the PATH the population will follow. 
 
+When you save, the specification will be stored into "src/main/spec/specification.xml"
+
+GENERATING SIMULATOR SPECIFIC CONFIGURATIONS
+--------------------------------------------
 To generate the MASSIS configuration run the following within the *basicscenario* folder
 
 	mvn clean compile exec:java -Dexec.mainClass="mosi.massis.MASSISLUAGenerator" -Dexec.args="src/main/spec/specification.xml"
