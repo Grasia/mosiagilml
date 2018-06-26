@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project cid="175" version="1.2">
+<project cid="0" version="1.2">
 <projectproperties>
 <projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
- <openeddiagram>test</openeddiagram></projectproperties>
+ <openeddiagram>mySim</openeddiagram></projectproperties>
 <leafpackages>
    <path>
     <package id="Project"/>
-    <package id="test"/>
+    <package id="mySim"/>
    </path>
 </leafpackages>
 <objects>
-<object id="MASSISPopulation0" type="ingenias.editor.entities.MASSISPopulation">
+<object id="FireEmergency0" type="ingenias.editor.entities.FireEmergency">
 <mapproperties>
-<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,Class1</key>
-<key id="AmountProperty">20</key>
+<key id="EventLocationY">20</key>
+<key id="EventLocationX">10</key>
+<key id="SizeFire">1</key>
+<key id="SpeedFire">10</key>
+<key id="EmergencyCreationDelay">100</key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
 </object>
-<object id="MASSISPopulation1" type="ingenias.editor.entities.MASSISPopulation">
+<object id="UbikSimPopulation0" type="ingenias.editor.entities.UbikSimPopulation">
 <mapproperties>
-<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,ClassesLobby.Class2,ClassesLobby.Class3,Class3</key>
-<key id="AmountProperty">10</key>
+<key id="PopulationDistribution">/30,30/</key>
+<key id="AmountProperty">40</key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
+<key id="PopulationBehavior">mindist</key>
 </mapproperties>
 </object>
 </objects>
 <relationships>
 </relationships>
 <models> 
- <model id="test" type="ingenias.editor.models.SimulationSpecModelJGraph">
-<object id="test" type="ingenias.editor.entities.SimulationSpecDataEntity">
+ <model id="mySim" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="mySim" type="ingenias.editor.entities.SimulationSpecDataEntity">
 <mapproperties>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
@@ -44,16 +48,16 @@
 
 	<graph>
 			
-	<node id="MASSISPopulation1" nid="node1" type="MASSISPopulation">
+	<node id="UbikSimPopulation0" nid="node0" type="UbikSimPopulation">
 		<attr name="bounds">
-			<rectangle x="236" y="65" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="302" y="29" width="126" height="38"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="MASSISPopulation0" nid="node0" type="MASSISPopulation">
+	<node id="FireEmergency0" nid="node1" type="FireEmergency">
 		<attr name="bounds">
-			<rectangle x="43" y="74" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="225" y="105" width="102" height="38"></rectangle>		</attr>
 
 
 	</node><parentship>
@@ -67,16 +71,16 @@
 
 	<layout>
 			
-	<node id="node1">
+	<node id="node0">
 		<attr name="bounds">
-			<rectangle x="236" y="65" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="302" y="29" width="126" height="38"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="node0">
+	<node id="node1">
 		<attr name="bounds">
-			<rectangle x="43" y="74" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="225" y="105" width="102" height="38"></rectangle>		</attr>
 
 
 	</node>

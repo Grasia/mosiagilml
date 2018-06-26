@@ -1,35 +1,10 @@
 @@@program @@@	
 		@@@saveto@@@
 			@@@file overwrite="yes"@@@
-				@@@v@@@fname@@@/v@@@.lua@@@/file@@@
+				@@@v@@@fname@@@/v@@@.props@@@/file@@@
 			@@@text@@@
-HumanDescriptions={
- @@@repeat id="popclass"@@@
-	@@@v@@@popclassname@@@/v@@@={
-		behavior="FollowingPath",
-		SpeedMin=1.0,
-		SpeedMax=8.0,
-		AnimationSpeedReference=4.0,
-		RewriteParameter={
-			Path="@@@v@@@PATHProperty@@@/v@@@"
-		}
-	},
-@@@/repeat@@@
-
-	populationClassDefault={
-		behavior="FollowingPath",
-		SpeedMin=1.0,
-		SpeedMax=8.0,
-		AnimationSpeedReference=4.0,
-		RewriteParameter={
-			Path="MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,ClassesLobby.Class2,ClassesLobby.Class3,ClassesLobby.Class4,ClassesLobby.Class5,Class5"
-		}
-	}
-}
-
-
 Commands:
- @@@repeat id="popclass"@@@
+@@@repeat id="popclass"@@@
 MassisLua.createHuman("@@@v@@@popclassname@@@/v@@@",@@@v@@@amount@@@/v@@@,"MainGate")
 @@@/repeat@@@
 
