@@ -122,6 +122,11 @@ extends ingenias.editor.extension.BasicCodeGeneratorImp {
 			for (GraphEntity ge:populations) {
 				Repeat rep=new Repeat("popclass");
 				rep.add(new Var("PATHProperty", ge.getAttributeByName("PATHProperty").getSimpleValue()));
+				if (ge.getAttributeByName("InitialLocation").getSimpleValue()!=null && ge.getAttributeByName("InitialLocation").getSimpleValue()!="")
+				rep.add(new Var("InitialLocation", ge.getAttributeByName("InitialLocation").getSimpleValue()));
+				else
+				rep.add(new Var("InitialLocation","MainGate"));
+
 				rep.add(new Var("popclassname", ge.getID()));
 				rep.add(new Var("amount", ge.getID()));
 				seq.addRepeat(rep);

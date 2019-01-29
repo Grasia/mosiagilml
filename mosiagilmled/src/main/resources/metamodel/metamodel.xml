@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta-models examplefile="example/demo.xml">
+  <object id="MASSISPopWithSpeed" inherits="MASSISPopulation"
+    instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="PopulationSpeed"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>PopulationSpeed</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+        <order>InitialLocation</order>
+        <order>PATHProperty</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mMASSISPopWithSpeed.png</small-icon>
+      <normal-icon>images/MASSISPopWithSpeed.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="PopulationSpeed"/>
+          <property id="InitialLocation"/>
+          <property id="PATHProperty"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="MASSISPopWithSpeed" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
   <object id="UbikSimPopulation" inherits="Population"
     instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
     <description/>
@@ -56,6 +109,52 @@
       </layout>
     </graphics>
   </object>
+  <object id="MASSISRunAway" inherits="MASSISPopulation"
+    instanciable="yes" keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+        <order>InitialLocation</order>
+        <order>PATHProperty</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mMASSISRunAway.png</small-icon>
+      <normal-icon>images/MASSISRunAway.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="InitialLocation"/>
+          <property id="PATHProperty"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="MASSISRunAway" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
   <metamodel icon="images/mSimulationSpec.png" id="SimulationSpec" name="">
     <properties>
       <property id="Description"
@@ -73,63 +172,16 @@ this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
 this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
 ]]></code>
     <objects>
-      <object id="FireEmergency"/>
       <object id="MASSISPopulation"/>
+      <object id="FireEmergency"/>
       <object id="Population"/>
       <object id="UbikSimPopulation"/>
+      <object id="MASSISRunAway"/>
+      <object id="MASSISPopWithSpeed"/>
       <object id="Emergency"/>
     </objects>
     <relationships/>
   </metamodel>
-  <object id="MASSISPopulation" inherits="Population" instanciable="yes"
-    keyfield="PATHProperty" package="" type="ingenias.editor.entities.MetaObject">
-    <description/>
-    <recommendation/>
-    <properties>
-      <property id="Description"
-        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
-        <defaultvalues/>
-        <label lang="en">Description</label>
-      </property>
-      <property id="PATHProperty"
-        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
-        <defaultvalues/>
-        <label lang="en">Description</label>
-      </property>
-      <preferredorder>
-        <order>id</order>
-        <order>AmountProperty</order>
-        <order>Description</order>
-        <order>PATHProperty</order>
-      </preferredorder>
-    </properties>
-    <graphics>
-      <small-icon>images/mMASSISPopulation.png</small-icon>
-      <normal-icon>images/MASSISPopulation.png</normal-icon>
-      <layout>
-        <properties>
-          <property id="id"/>
-          <property id="PATHProperty"/>
-          <property id="AmountProperty"/>
-        </properties>
-        <views>
-          <content id="INGENIAS">
-##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
-##vbox Background="white" constraints="BorderLayout.CENTER"#
-##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
-##stereotype text="MASSISPopulation" HorizontalAlignment="CENTER"/#
-##/panel#
-##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
-##label id="Id"/#
-##/panel#
-##linepanel Background="white"/#
-##/vbox#
-##/panel#
-</content>
-        </views>
-      </layout>
-    </graphics>
-  </object>
   <object id="FireEmergency" inherits="Emergency" instanciable="yes"
     keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
     <description/>
@@ -141,7 +193,7 @@ this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
         <label lang="en">Description</label>
       </property>
       <property id="SizeFire"
-        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.Integer">
+        preferredwidget="ingenias.editor.widget.IntegerJTextField" type="java.lang.Integer">
         <defaultvalues/>
         <label lang="en">Description</label>
       </property>
@@ -178,6 +230,64 @@ this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
 ##vbox Background="white" constraints="BorderLayout.CENTER"#
 ##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
 ##stereotype text="FireEmergency" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="MASSISPopulation" inherits="Population" instanciable="yes"
+    keyfield="PATHProperty" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="InitialLocation"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="PATHProperty"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>AmountProperty</order>
+        <order>Description</order>
+        <order>InitialLocation</order>
+        <order>PATHProperty</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mMASSISPopulation.png</small-icon>
+      <normal-icon>images/MASSISPopulation.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="InitialLocation"/>
+          <property id="PATHProperty"/>
+          <property id="InitialLocation"/>
+          <property id="PATHProperty"/>
+          <property id="AmountProperty"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="MASSISPopulation" HorizontalAlignment="CENTER"/#
 ##/panel#
 ##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
 ##label id="Id"/#

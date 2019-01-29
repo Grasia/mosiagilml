@@ -5,7 +5,7 @@
 			@@@text@@@
 Commands:
 @@@repeat id="popclass"@@@
-MassisLua.createHuman("@@@v@@@popclassname@@@/v@@@",@@@v@@@amount@@@/v@@@,"MainGate")
+MassisLua.createHuman("@@@v@@@popclassname@@@/v@@@",@@@v@@@amount@@@/v@@@,"@@@v@@@InitialLocation@@@/v@@@")
 @@@/repeat@@@
 
 @@@/text@@@
