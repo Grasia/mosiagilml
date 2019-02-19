@@ -1,0 +1,22 @@
+@@@program @@@  
+    @@@saveto@@@
+      @@@file overwrite="yes"@@@
+        @@@v@@@fname@@@/v@@@.json@@@/file@@@
+      @@@text@@@
+{
+  "population": {
+    "amount": @@@v@@@AmountProperty@@@/v@@@,
+    "behavior": "@@@v@@@PopulationBehavior@@@/v@@@"
+  },
+  "fire": {
+    "x": @@@v@@@EventLocationX@@@/v@@@,
+    "y": @@@v@@@EventLocationY@@@/v@@@,
+    "size": @@@v@@@EventLocationY@@@/v@@@,
+    "speed": @@@v@@@SpeedFire@@@/v@@@,
+    "delay": @@@v@@@EmergencyCreationDelay@@@/v@@@
+  }
+}
+@@@/text@@@
+    @@@/saveto@@@
+  
+@@@/program@@@
