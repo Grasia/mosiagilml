@@ -1,6 +1,6 @@
 MOSIAGIL-ML
 ------------
-The projects contains a Metamodel definition to build a MOSIAGIL-ML Editor. This editor allows a developer to define scenarios to be simulated in UBIKSIM or MASSIS.
+The projects contains a Metamodel definition to build a MOSIAGIL-ML Editor. This editor allows a developer to define scenarios to be simulated in UBIKSIM, MASSIS or HYDRA.
 
 Requirements
 ------------
