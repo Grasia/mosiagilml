@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="175" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>spec1</openeddiagram> <openeddiagram>spec2</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="spec1"/>
+   </path>
+   <path>
+    <package id="Project"/>
+    <package id="spec2"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="FireEmergency0" type="ingenias.editor.entities.FireEmergency">
+<mapproperties>
+<key id="EventLocationY">50</key>
+<key id="EventLocationX">60</key>
+<key id="SizeFire">1</key>
+<key id="SpeedFire">1</key>
+<key id="EmergencyCreationDelay">80</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISPopulation1" type="ingenias.editor.entities.MASSISPopulation">
+<mapproperties>
+<key id="PATHProperty">Entrada_exterior03</key>
+<key id="AmountProperty">80</key>
+<key id="InitialLocation">clase01</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="UbikSimPopulation0" type="ingenias.editor.entities.UbikSimPopulation">
+<mapproperties>
+<key id="PopulationDistribution">/30,30/50,50/60,60/70,70/80,80/</key>
+<key id="AmountProperty">80</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+<key id="PopulationBehavior">mindist</key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+</relationships>
+<models> 
+ <model id="spec1" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="spec1" type="ingenias.editor.entities.SimulationSpecDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="FireEmergency0" nid="node1" type="FireEmergency">
+		<attr name="bounds">
+			<rectangle x="263" y="24" width="102" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="UbikSimPopulation0" nid="node0" type="UbikSimPopulation">
+		<attr name="bounds">
+			<rectangle x="90" y="22" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+<cellconstraint id="node0:INGENIAS">
+<currentcell id="node0" height="36" width="126"/>
+</cellconstraint>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="263" y="24" width="102" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="90" y="22" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node>
+	</layout>
+</gxl> </model>
+ <model id="spec2" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="spec2" type="ingenias.editor.entities.SimulationSpecDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="MASSISPopulation0" nid="node0" type="MASSISPopulation">
+		<attr name="bounds">
+			<rectangle x="129" y="83" width="122" height="36"></rectangle>		</attr>
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="129" y="83" width="122" height="36"></rectangle>		</attr>
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>
