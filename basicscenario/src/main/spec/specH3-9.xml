@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="175" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>etsitsim</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="etsitsim"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="FireEmergency0" type="ingenias.editor.entities.FireEmergency">
+<mapproperties>
+<key id="EventLocationY">150</key>
+<key id="EventLocationX">55</key>
+<key id="SizeFire">1</key>
+<key id="SpeedFire">1</key>
+<key id="EmergencyCreationDelay">10</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway0" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">clase01</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway1" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">clase02</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway2" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">clase03</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway3" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">distribuidor01</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="UbikSimPopulation0" type="ingenias.editor.entities.UbikSimPopulation">
+<mapproperties>
+<key id="PopulationDistribution">/70,160/72,160/80,130/75,128/76,131/75,138/68,163/79,126/64,142/75,135/82,136/65,141/67,156/67,182/100,134/96,126/92,130/88,126/101,142/30,30/50,50/60,60/70,70/120,100/118,98/115,70/115,100/112,84/112,85/117,85/109,90/113,85/123,90/123,105/115,103/120,110/130,110/168,107/170,100/168,98/168,100/170,110/175,98/155,70/165,70/168,84/162,85/173,90/173,105/165,103/170,110/180,110/185,98/185,105/188,90/190,80/187,114/155,105/176,109/220,100/218,98/218,100/220,110/225,98/207,112/210,113/208,109/209,113/204,111/200,103/205,70/215,70/218,84/215,100/212,84/212,85/223,90/115,60/118,50/120,58/115,65/117,45/122,65/120,60/119,48/121,53/29,140/170,58/84,50/165,61/168,45/170,63/92,148/90,146/164,59/166,62/171,54/174,55/166,53/145,60/148,50/136,62/135,60/133,58/147,45/152,65/150,60/149,48/151,53/175,60/223,115/220,108/221,101/223,114/216,109/217,108/</key>
+<key id="AmountProperty">0</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+<key id="PopulationBehavior">mindist</key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+</relationships>
+<models> 
+ <model id="etsitsim" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="etsitsim" type="ingenias.editor.entities.SimulationSpecDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="MASSISRunAway3" nid="node5" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="33" y="28" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="MASSISRunAway1" nid="node1" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="23" y="144" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="MASSISRunAway2" nid="node2" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="21" y="200" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="FireEmergency0" nid="node0" type="FireEmergency">
+		<attr name="bounds">
+			<rectangle x="509" y="26" width="102" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="MASSISRunAway0" nid="node4" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="31" y="81" width="110" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="UbikSimPopulation0" nid="node3" type="UbikSimPopulation">
+		<attr name="bounds">
+			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+<cellconstraint id="node3:INGENIAS">
+<currentcell id="node3" height="36" width="126"/>
+</cellconstraint>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node5">
+		<attr name="bounds">
+			<rectangle x="33" y="28" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="23" y="144" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="bounds">
+			<rectangle x="21" y="200" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="509" y="26" width="102" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node4">
+		<attr name="bounds">
+			<rectangle x="31" y="81" width="110" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node3">
+		<attr name="bounds">
+			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>
