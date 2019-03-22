@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with INGENIAS IDE; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-*/
+ */
 
 
 import ingenias.generator.browser.*;
@@ -41,11 +41,11 @@ import org.jgraph.graph.DefaultGraphCell;
 
 
 /**
-*  This class generates HTML documentation from a INGENIAS specification
-*
-*@author     Jorge Gomez
-*@created    29 de marzo de 2003
-*/
+ *  This class generates HTML documentation from a INGENIAS specification
+ *
+ *@author     Jorge Gomez
+ *@created    29 de marzo de 2003
+ */
 public class MASSISLUAGenerator
 extends ingenias.editor.extension.BasicCodeGeneratorImp {
 
@@ -121,14 +121,50 @@ extends ingenias.editor.extension.BasicCodeGeneratorImp {
 			GraphEntity[] populations = generateEntitiesOfType("MASSISPopulation", browser);
 			for (GraphEntity ge:populations) {
 				Repeat rep=new Repeat("popclass");
-				rep.add(new Var("PATHProperty", ge.getAttributeByName("PATHProperty").getSimpleValue()));
+				rep.add(new Var("popclasspath", ge.getAttributeByName("PATHProperty").getSimpleValue()));
+				rep.add(new Var("popclasstype", "FollowingPathAgent"));
+				rep.add(new Var("popclassminspeed", "1"));
+				rep.add(new Var("popclassmaxspeed", "3"));
 				if (ge.getAttributeByName("InitialLocation").getSimpleValue()!=null && ge.getAttributeByName("InitialLocation").getSimpleValue()!="")
-				rep.add(new Var("InitialLocation", ge.getAttributeByName("InitialLocation").getSimpleValue()));
+					rep.add(new Var("InitialLocation", ge.getAttributeByName("InitialLocation").getSimpleValue()));
 				else
-				rep.add(new Var("InitialLocation","MainGate"));
+					rep.add(new Var("InitialLocation","MainGate"));
 
 				rep.add(new Var("popclassname", ge.getID()));
-				rep.add(new Var("amount", ge.getID()));
+				rep.add(new Var("amount", ge.getAttributeByName("AmountProperty").getSimpleValue()));
+				seq.addRepeat(rep);
+			}
+
+			populations = generateEntitiesOfType("MASSISRunAway", browser);
+			for (GraphEntity ge:populations) {
+				Repeat rep=new Repeat("popclass");
+				rep.add(new Var("popclasspath", ge.getAttributeByName("PATHProperty").getSimpleValue()));
+				rep.add(new Var("popclasstype", "RunAway"));
+				rep.add(new Var("popclassminspeed", "1"));
+				rep.add(new Var("popclassmaxspeed", "3"));
+				if (ge.getAttributeByName("InitialLocation").getSimpleValue()!=null && ge.getAttributeByName("InitialLocation").getSimpleValue()!="")
+					rep.add(new Var("InitialLocation", ge.getAttributeByName("InitialLocation").getSimpleValue()));
+				else
+					rep.add(new Var("InitialLocation","MainGate"));
+				rep.add(new Var("popclassname", ge.getID()));
+				rep.add(new Var("amount", ge.getAttributeByName("AmountProperty").getSimpleValue()));
+				seq.addRepeat(rep);
+			}
+
+			populations = generateEntitiesOfType("MASSISPopWithSpeed", browser);
+			for (GraphEntity ge:populations) {
+				Repeat rep=new Repeat("popclass");
+				rep.add(new Var("popclasspath", ge.getAttributeByName("PATHProperty").getSimpleValue()));
+				rep.add(new Var("popclasstype", "FollowingPathAgent"));
+				rep.add(new Var("popclassminspeed",  ge.getAttributeByName("PopulationSpeed").getSimpleValue()));
+				rep.add(new Var("popclassmaxspeed", ge.getAttributeByName("PopulationSpeed").getSimpleValue()));
+				if (ge.getAttributeByName("InitialLocation").getSimpleValue()!=null && ge.getAttributeByName("InitialLocation").getSimpleValue()!="")
+					rep.add(new Var("InitialLocation", ge.getAttributeByName("InitialLocation").getSimpleValue()));
+				else
+					rep.add(new Var("InitialLocation","MainGate"));
+
+				rep.add(new Var("popclassname", ge.getID()));
+				rep.add(new Var("amount", ge.getAttributeByName("AmountProperty").getSimpleValue()));
 				seq.addRepeat(rep);
 			}
 		} catch (NotInitialised e) {			
@@ -137,10 +173,10 @@ extends ingenias.editor.extension.BasicCodeGeneratorImp {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
+
 		return seq;
 	}
-	
+
 	/**
 	 * It obtains all entities in the specification whose type represented as string
 	 * is the same as the string passed as parameter
@@ -161,7 +197,7 @@ extends ingenias.editor.extension.BasicCodeGeneratorImp {
 		}
 		return toGEArray(actors.toArray());
 	}
-	
+
 	/**
 	 * It casts an array of objets to an array of GraphEntity
 	 *  
@@ -223,7 +259,7 @@ extends ingenias.editor.extension.BasicCodeGeneratorImp {
 				MASSISLUAGenerator luagen = new MASSISLUAGenerator(args[0]);
 				Properties props = luagen.getBrowser().getState().prop;				
 				luagen.putProperty(new ProjectProperty("massisluagen","massisluagen:fname","fname","./sample","massisluagen"));  
-				
+
 				luagen.run();
 				if (ingenias.editor.Log.getInstance().areThereErrors() ){
 					for (Frame f:Frame.getFrames()){

@@ -1,8 +1,41 @@
 @@@program @@@	
 		@@@saveto@@@
 			@@@file overwrite="yes"@@@
-				@@@v@@@fname@@@/v@@@.props@@@/file@@@
+				@@@v@@@fname@@@/v@@@.lua@@@/file@@@
 			@@@text@@@
+Scenario = {			
+    Scene="telecom_faculty",
+	CameraConfig = {
+	location = {78.60778, 100.0, 55.327583},
+	rotation = {90.0,0.0,0.0},
+	lookAt = {78.60778,100.0,55.327583}
+	},
+	AgentsDescriptions = {
+@@@repeat id="popclass"@@@
+        @@@v@@@popclassname@@@/v@@@ = {
+            behavior = "@@@v@@@popclasstype@@@/v@@@",
+	        SpeedMin = @@@v@@@popclassminspeed@@@/v@@@,
+            SpeedMax = @@@v@@@popclassmaxspeed@@@/v@@@,	    
+            AnimationSpeedReference = 2.0,
+            RewriteParameter = {
+                Path = "@@@v@@@popclasspath@@@/v@@@",
+		StoppingDistance=4
+            },
+	    Components = {
+                AgentMotor = {
+                    minRadious = 0.01,
+                    maxRadious = 0.05,
+                    maxPedestrianDensityTolerance = 10.0,
+                    motorStoppingDistance = 2.0,
+                    dmin = 0.5,
+                    dmid = 4.0,
+                    dmax = 10.0
+                }
+            }           
+        },
+@@@/repeat@@@
+	}
+}
 Commands:
 @@@repeat id="popclass"@@@
 MassisLua.createHuman("@@@v@@@popclassname@@@/v@@@",@@@v@@@amount@@@/v@@@,"@@@v@@@InitialLocation@@@/v@@@")
@@ -10,5 +43,4 @@ MassisLua.createHuman("@@@v@@@popclassname@@@/v@@@",@@@v@@@amount@@@/v@@@,"@@@v@
 
 @@@/text@@@
 		@@@/saveto@@@
-	
 @@@/program@@@

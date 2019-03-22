@@ -2,11 +2,11 @@
 <project cid="175" version="1.2">
 <projectproperties>
 <projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
- <openeddiagram>spec1</openeddiagram></projectproperties>
+ <openeddiagram>sample simulation</openeddiagram> <openeddiagram>spec2</openeddiagram></projectproperties>
 <leafpackages>
    <path>
     <package id="Project"/>
-    <package id="spec1"/>
+    <package id="sample simulation"/>
    </path>
    <path>
     <package id="Project"/>
@@ -25,19 +25,46 @@
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
 </object>
-<object id="MASSISPopulation0" type="ingenias.editor.entities.MASSISPopulation">
+<object id="MASSISRunAway0" type="ingenias.editor.entities.MASSISRunAway">
 <mapproperties>
-<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,Class1</key>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
 <key id="AmountProperty">20</key>
-<key id="InitialLocation"></key>
+<key id="InitialLocation">clase01</key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
 </mapproperties>
 </object>
-<object id="MASSISPopulation1" type="ingenias.editor.entities.MASSISPopulation">
+<object id="MASSISRunAway1" type="ingenias.editor.entities.MASSISRunAway">
 <mapproperties>
-<key id="PATHProperty"></key>
-<key id="AmountProperty"></key>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">clase02</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway2" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">clase03</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISRunAway3" type="ingenias.editor.entities.MASSISRunAway">
+<mapproperties>
+<key id="PATHProperty">entrada_exterior04,Entrada_exterior03,entrada_exterior02,entrada_exterior01</key>
+<key id="AmountProperty">20</key>
+<key id="InitialLocation">distribuidor01</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="MASSISPopulation0" type="ingenias.editor.entities.MASSISPopulation">
+<mapproperties>
+<key id="PATHProperty">MainHall.Entrance,MainHall.Library,LobbyEventRoom.Hall,ClassesLobby.Class1,Class1</key>
+<key id="AmountProperty">20</key>
 <key id="InitialLocation"></key>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
@@ -56,8 +83,8 @@
 <relationships>
 </relationships>
 <models> 
- <model id="spec1" type="ingenias.editor.models.SimulationSpecModelJGraph">
-<object id="spec1" type="ingenias.editor.entities.SimulationSpecDataEntity">
+ <model id="sample simulation" type="ingenias.editor.models.SimulationSpecModelJGraph">
+<object id="sample simulation" type="ingenias.editor.entities.SimulationSpecDataEntity">
 <mapproperties>
 <key id="Description"></key>
 <key id="_view_type">INGENIAS</key>
@@ -70,34 +97,55 @@
 
 	<graph>
 			
-	<node id="FireEmergency0" nid="node1" type="FireEmergency">
+	<node id="MASSISRunAway2" nid="node5" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="82" y="155" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="UbikSimPopulation0" nid="node1" type="UbikSimPopulation">
+		<attr name="bounds">
+			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="FireEmergency0" nid="node2" type="FireEmergency">
 		<attr name="bounds">
 			<rectangle x="509" y="26" width="102" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="MASSISPopulation1" nid="node0" type="MASSISPopulation">
+	<node id="MASSISRunAway3" nid="node4" type="MASSISRunAway">
 		<attr name="bounds">
-			<rectangle x="70" y="27" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="81" y="203" width="110" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="UbikSimPopulation0" nid="node2" type="UbikSimPopulation">
-		<attr name="view">
-			<string>INGENIAS</string>
-		</attr>
-
+	<node id="MASSISRunAway1" nid="node3" type="MASSISRunAway">
 		<attr name="bounds">
-			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+			<rectangle x="76" y="100" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="MASSISRunAway0" nid="node0" type="MASSISRunAway">
+		<attr name="bounds">
+			<rectangle x="72" y="54" width="110" height="36"></rectangle>		</attr>
 
 
 	</node><parentship>
 </parentship>
 <entityconstraints>
-<cellconstraint id="node2:INGENIAS">
-<currentcell id="node2" height="36" width="126"/>
+<cellconstraint id="node1:INGENIAS">
+<currentcell id="node1" height="36" width="126"/>
 </cellconstraint>
 </entityconstraints>
 
@@ -107,27 +155,48 @@
 
 	<layout>
 			
+	<node id="node5">
+		<attr name="bounds">
+			<rectangle x="82" y="155" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
 	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+		<attr name="view">
+			<string>INGENIAS</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node2">
 		<attr name="bounds">
 			<rectangle x="509" y="26" width="102" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="node0">
+	<node id="node4">
 		<attr name="bounds">
-			<rectangle x="70" y="27" width="122" height="36"></rectangle>		</attr>
+			<rectangle x="81" y="203" width="110" height="36"></rectangle>		</attr>
 
 
 	</node>
 			
-	<node id="node2">
-		<attr name="view">
-			<string>INGENIAS</string>
-		</attr>
-
+	<node id="node3">
 		<attr name="bounds">
-			<rectangle x="369" y="26" width="126" height="36"></rectangle>		</attr>
+			<rectangle x="76" y="100" width="110" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="72" y="54" width="110" height="36"></rectangle>		</attr>
 
 
 	</node>
